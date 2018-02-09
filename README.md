@@ -17,3 +17,4 @@ To make it work [First time only]:
 	a- FileName : The full path of the Groups excel file
 	b- RootFolderName : The folder that the folders should be created underneath
 	c- AuthFilePath : The path of the auth file (the one downloaded in 4)
+	d- SharingMessage : The message that will be sent when updating sharing

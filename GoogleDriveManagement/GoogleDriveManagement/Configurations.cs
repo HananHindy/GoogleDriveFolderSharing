@@ -31,5 +31,13 @@ namespace GoogleDriveManagement
                 return ConfigurationManager.AppSettings["RootFolderName"];
             }
         }
+
+        public static string SharingMessage
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["SharingMessage"];
+            }
+        }
     }
 }

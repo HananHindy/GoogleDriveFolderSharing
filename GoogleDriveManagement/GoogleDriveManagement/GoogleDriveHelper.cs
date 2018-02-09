@@ -72,8 +72,17 @@ namespace GoogleDriveManagement
 
         public void Share(string fileId, string value, string type, string role)
         {
-            var permission = new Permission { Value = value, Type = type, Role = role };
-            _driveService.Permissions.Insert(permission, fileId).Execute();
+            var permission = new Permission
+            {
+                Value = value,
+                Type = type,
+                Role = role,
+
+            };
+
+            var request = _driveService.Permissions.Insert(permission, fileId);
+            request.EmailMessage = Configurations.SharingMessage;
+            request.Execute();
         }
 
         public string GetIdByPath(string path)

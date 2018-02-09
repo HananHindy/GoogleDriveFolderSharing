@@ -33,7 +33,7 @@ namespace GoogleDriveManagement
 
                 File file = google.CreateDirectory(folderName, group.TeamName);
                 String folderId = file.Id;
-                google.Share(folderId, group.Email, "user", "reader");
+                // google.Share(folderId, group.Email, "user", "reader");
                 google.Share(folderId, group.Email, "user", "writer");
             }
         }
